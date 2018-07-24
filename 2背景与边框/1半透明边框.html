@@ -23,7 +23,7 @@ header{
     border: .3em solid hsla(0, 0%, 100%, .5);
     background-clip: padding-box;
 }
-a{
+body>a{
     position: fixed;
     top: 3em;
     right: 4em;
@@ -36,6 +36,10 @@ a{
     box-sizing:border-box;
     border: 1em solid hsla(0, 0%, 100%, .5);
     background-clip: padding-box;
+}
+a:nth-child(3){
+    right: 15em;
+    background-color:mediumseagreen;
 }
 div {
     top: 10%;
@@ -55,6 +59,7 @@ div {
 <body>
     <header>2.1 半透明边框</header>
     <a href="http://play.csssecrets.io/translucent-borders" target="_blank">试一试</a> 
+    <a href="http://w3.org/TR/css-backgrounds" target="_blank">css背景与边框，相关规范</a> 
     <div>
         我们都要一个半透明边框
         <ul>
@@ -62,7 +67,7 @@ div {
             <li>background-clip: padding-box;(背景裁剪，默认时值：border-box)</li>
             <li>border: 5rem solid hsla(0, 0%, 100%, .5);
                 <ul>
-                    <li>（hsla(hue, saturation, lightness, alpha)）</li>
+                    <li><a href="http://www.css88.com/book/css/values/color/hsla.htm" target="_blank">hsla(hue, saturation, lightness, alpha)</a></li>
                 </ul>
             </li>
         </ul>
