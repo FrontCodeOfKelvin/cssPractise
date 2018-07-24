@@ -1,14 +1,71 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh_cn">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>2.1半透明边框</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+<style>
+body{
+    background: url('http://csssecrets.io/images/stone-art.jpg') no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+header{
+    z-index: 1;
+    text-align: center;
+    font-size: 2em;
+    background: gold;
+    margin: 0 3em;
+    margin-top: .15em;
+
+    box-sizing:border-box;
+    border: .3em solid hsla(0, 0%, 100%, .5);
+    background-clip: padding-box;
+}
+a{
+    position: fixed;
+    top: 3em;
+    right: 4em;
+    z-index: 1;
+
+    background-color:hotpink;
+    color:aliceblue;
+    padding: 1rem;
+
+    box-sizing:border-box;
+    border: 1em solid hsla(0, 0%, 100%, .5);
+    background-clip: padding-box;
+}
+div {
+    top: 10%;
+    left: 10%;
+    background: white;
+    margin: 0;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+
+    box-sizing:border-box;
+    border: 5em solid hsla(0, 0%, 100%, .5);
+    background-clip: padding-box;
+}
+</style>
 </head>
 <body>
-    
+    <header>2.1 半透明边框</header>
+    <a href="http://play.csssecrets.io/translucent-borders" target="_blank">试一试</a> 
+    <div>
+        我们都要一个半透明边框
+        <ul>
+            <li>box-sizing: border-box;(元素尺寸指代的盒子，默认时值：border-content)</li>
+            <li>background-clip: padding-box;(背景裁剪，默认时值：border-box)</li>
+            <li>border: 5rem solid hsla(0, 0%, 100%, .5);
+                <ul>
+                    <li>（hsla(hue, saturation, lightness, alpha)）</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
