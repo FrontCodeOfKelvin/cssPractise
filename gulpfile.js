@@ -5,7 +5,7 @@ var stylus = require('gulp-stylus'),
 
     
 gulp.task('html', function () {
-    return gulp.src(['src/**/*.html','*'])
+    return gulp.src(['src/**/*.html','*.html'])
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({
             stream: true
