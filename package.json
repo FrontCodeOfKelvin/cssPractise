@@ -1,0 +1,26 @@
+{
+  "name": "css_practise",
+  "version": "1.0.0",
+  "description": "learn css secrete",
+  "main": "main.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrontCodeOfKelvin/cssPractise.git"
+  },
+  "author": "Kelvin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrontCodeOfKelvin/cssPractise/issues"
+  },
+  "homepage": "https://github.com/FrontCodeOfKelvin/cssPractise#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-stylus": "^2.7.0"
+  },
+  "dependencies": {}
+}
