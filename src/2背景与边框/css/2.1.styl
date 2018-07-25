@@ -1,48 +1,51 @@
-body{
+semi-transparent-border()
+    box-sizing:border-box;
+    border: arguments solid hsla(0, 0%, 100%, .5);
+    background-clip: padding-box;
+
+body
     background: url('../images/stone-art.jpg') no-repeat;
     background-size: cover;
     margin: 0;
-}
-header{
-    z-index: 1;
-    text-align: center;
-    font-size: 2em;
-    background: gold;
-    margin: 0 3em;
-    margin-top: .15em;
 
-    box-sizing:border-box;
-    border: .3em solid hsla(0, 0%, 100%, .5);
-    background-clip: padding-box;
-}
-body>a{
-    position: fixed;
-    top: 3em;
-    right: 4em;
-    z-index: 1;
+    header
+        z-index: 1;
+        text-align: center;
+        font-size: 2em;
+        background: gold;
+        margin: 0 3em;
+        margin-top: .15em;
+        semi-transparent-border(.3em)
+    .suspend-box
+        position absolute
+        width 80%
+        height 5em
+        margin 1em 0
 
-    background-color:hotpink;
-    color:aliceblue;
-    padding: 1rem;
-
-    box-sizing:border-box;
-    border: 1em solid hsla(0, 0%, 100%, .5);
-    background-clip: padding-box;
-}
-a:nth-child(3){
-    right: 15em;
-    background-color:mediumseagreen;
-}
-div {
-    top: 10%;
-    left: 10%;
-    background: white;
-    margin: 0;
-    position: absolute;
-    width: 80%;
-    height: 80%;
-
-    box-sizing:border-box;
-    border: 5em solid hsla(0, 0%, 100%, .5);
-    background-clip: padding-box;
-}
+        .suspend-btn
+            float right
+            margin-left 1em
+            background-color:hotpink;
+            color:aliceblue;
+            padding: 1rem;
+            semi-transparent-border(1em)
+            &:nth-child(even)
+                 background-color mediumseagreen
+    .content
+        top: 20%;
+        left: 20%;
+        background: white;
+        margin: 0;
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        semi-transparent-border(5em)
+        .mixin
+            color mediumseagreen
+            background #655
+            padding 2em
+            width 40%
+            outline: .2em dashed #fff
+            outline-offset: -1em
+            margin-left: 2em
+            border-radius: 1em
