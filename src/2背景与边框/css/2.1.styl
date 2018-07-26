@@ -3,38 +3,12 @@
 body
     background: url('stone-art.jpg') no-repeat;
     background-size: cover;
-    margin: 0;
-
-    header
-        z-index: 1;
-        text-align: center;
-        font-size: 2em;
-        background: gold;
-        margin: 0 3em;
-        margin-top: .15em;
-        semi-transparent-border(.3em)
-    .suspend-box
-        position absolute
-        width 80%
-        height 5em
-        margin 1em 0
-        .suspend-btn
-            float right
-            margin-left 1em
-            background-color:hotpink;
-            color:aliceblue;
-            padding: 1rem;
-            semi-transparent-border(1em)
-            &:nth-child(even)
-                 background-color mediumseagreen
-    .content
-        top: 20%;
-        left: 20%;
+    main
+        position: absolute
+        bottom 0
+        width 100%
+        top: 6em
         background: white;
-        margin: 0;
-        position: absolute;
-        width: 60%;
-        height: 60%;
-        semi-transparent-border(5em)
+        semi-transparent-border(2em)
         .stitch-box
-            stitch-box()
+            stitch-box(24em)

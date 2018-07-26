@@ -9,12 +9,12 @@
 </head>
 <body>
     <header>2.1 半透明边框</header>
-    <div class="suspend-box">
-        <a class="suspend-btn" href="http://play.csssecrets.io/translucent-borders" target="_blank">试一试</a> 
-        <a class="suspend-btn" href="http://w3.org/TR/css-backgrounds" target="_blank">css背景与边框，相关规范</a> 
-    </div>
+    <nav>
+        <a href="http://play.csssecrets.io/translucent-borders" target="_blank">试一试</a> 
+        <a href="http://w3.org/TR/css-backgrounds" target="_blank">css背景与边框，相关规范</a> 
+    </nav>
 
-    <div class="content">
+    <main>
         我们都要一个半透明边框
         <ul>
             <li>box-sizing: border-box;(元素尺寸指代的盒子，默认时值：border-content)</li>
@@ -26,13 +26,12 @@
             </li>
         </ul>
         <div class="stitch-box">
-<pre>
-semi-transparent-border()
-    box-sizing:border-box;
-    border: arguments solid hsla(0, 0%, 100%, .5);
-    background-clip: padding-box;
-</pre>
+            <ul>semi-transparent-border(borderWidth_)
+                <li>box-sizing:border-box;</li>
+                <li>border: borderWidth_ solid hsla(0, 0%, 100%, .5);</li>
+                <li>background-clip: padding-box;</li>
+            </ul>
         </div>
-    </div>
+    </main>
 </body>
 </html>
