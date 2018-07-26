@@ -1,2 +1,3 @@
-# cssPractise
-my css practise
+# TODO
+---
+*gulp clean
