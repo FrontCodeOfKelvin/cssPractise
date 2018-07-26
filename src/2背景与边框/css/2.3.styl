@@ -1,4 +1,16 @@
 @import '0common/stylus'
 
 body
-    background: #58a
+    background: skyblue
+    main
+        box
+            &:nth-child(1)
+                background: url(code-pirate.svg) no-repeat bottom right #58a
+                background-position: right 20px bottom 10px
+            &:nth-child(2)
+                padding: 10px;
+                background: url("code-pirate.svg") no-repeat #5aa bottom right; /* 或 100% 100% */ 
+                background-origin: content-box;
+            &:nth-child(3)
+                background: url("code-pirate.svg") no-repeat #491; 
+                background-position: calc(100% - 20px) calc(100% - 10px);

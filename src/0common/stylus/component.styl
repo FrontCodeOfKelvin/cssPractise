@@ -38,15 +38,15 @@ topics
         border-top-right-radius: 2em
         border-bottom-right-radius: 2em
         &:nth-child(1)
-            background: aliceblue
+            background: $color1
         &:nth-child(2)
-            background: #faebd7
+            background: $color2
         &:nth-child(3)
-            background: #00ffff
+            background: $color3
         &:nth-child(4)
-            background: #7FFFD4
+            background: $color4
         &:nth-child(5)
-            background: #F0FFFF
+            background: $color5
 main
     position: absolute
     bottom 0
@@ -54,6 +54,24 @@ main
     top: 6em
     background: white;
     semi-transparent-border(2em)
+    border-left-width: 13em
+    display flex
+    flex-flow: row wrap
+    box
+        padding 1em 0
+        width 35em
+        height 15em
+        semi-transparent-border(.3em)
+        &:nth-child(1)
+            background: $color1
+        &:nth-child(2)
+            background: $color2
+        &:nth-child(3)
+            background: $color3
+        &:nth-child(4)
+            background: $color4
+        &:nth-child(5)
+            background: $color5
 mark
     position absolute
     bottom 5em

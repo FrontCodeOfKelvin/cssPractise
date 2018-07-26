@@ -18,13 +18,42 @@
     </nav>
     <topics>
         <topic>针对容器某个角对背景图片做偏移定位，如右下角</topic>
-        <topic>针对容器某个角对背景图片做偏移定位，如右下角</topic>
-        <topic>针对容器某个角对背景图片做偏移定位，如右下角</topic>
-        <topic>针对容器某个角对背景图片做偏移定位，如右下角</topic>
-        <topic>针对容器某个角对背景图片做偏移定位，如右下角</topic>
+        <topic>背景图偏移量和padding相同</topic>
+        <topic>仍然以左上角偏移的思路来考虑</topic>
     </topics>
     <main>
-        
+        <box>
+            <pre>
+background: url(code-pirate.svg) no-repeat bottom right #58a
+background-position: right 20px bottom 10px
+
+回退方案：
+background: url(code-pirate.svg) no-repeat bottom right #58a;
+background-position: right 20px bottom 10px;
+            </pre>
+        </box>
+
+        <box>
+            <pre>
+如果还用background-position扩展语法：
+padding: 10px;
+background: url(code-pirate.svg) no-repeat #58a; 
+background-position: right 10px bottom 10px;
+
+上面有3个10px，不好维护；使用background-origin优化：
+padding: 10px;
+background: url("code-pirate.svg") no-repeat #5aa bottom right; /* 或 100% 100% */ 
+background-origin: content-box;
+            </pre>
+        </box>
+
+        <box>
+            <pre>
+使用calc()
+background: url("code-pirate.svg") no-repeat; 
+background-position: calc(100% - 20px) calc(100% - 10px);
+            </pre>
+        </box>
     </main>
 </body>
 </html>
