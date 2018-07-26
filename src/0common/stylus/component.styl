@@ -7,9 +7,9 @@ header
     semi-transparent-border(.3em)
 nav
     border 1px solid #fff
-    display: block
+    display: flex
+    flex-flow: row-reverse wrap
     a
-        float right
         margin-left .1em
         background-color:hotpink;
         color:aliceblue;
@@ -19,6 +19,34 @@ nav
             background-color mediumseagreen
         &.other
             background-color #20a0ff
+
+topics
+    width 13em
+    z-index 1
+    position fixed
+    top 8.1em
+    display flex
+    flex-flow: column nowrap
+    topic
+        color: black
+        font-weight: bold
+        font-size: .9em
+        line-height: 1.3em
+        margin-top .5em
+        box-shadow: .1em .1em 1em .1em green inset 
+        padding .3em .5em
+        border-top-right-radius: 2em
+        border-bottom-right-radius: 2em
+        &:nth-child(1)
+            background: aliceblue
+        &:nth-child(2)
+            background: #faebd7
+        &:nth-child(3)
+            background: #00ffff
+        &:nth-child(4)
+            background: #7FFFD4
+        &:nth-child(5)
+            background: #F0FFFF
 main
     position: absolute
     bottom 0
@@ -26,3 +54,9 @@ main
     top: 6em
     background: white;
     semi-transparent-border(2em)
+mark
+    position absolute
+    bottom 5em
+    right 5em
+    box-shadow: 0 0 3em 1em red
+    stitch-box(22em)

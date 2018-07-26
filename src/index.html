@@ -5,13 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Css揭秘</title>
+    <style>
+body{
+    background: skyblue
+}
+nav {
+  border: 1px solid #fff;
+  display: flex;
+  flex-flow: row-reverse wrap
+}
+nav a {
+  float: right;
+  margin-left: 0.1em;
+  color: #f0f8ff;
+  background-color: hotpink;
+  padding: 0.7rem;
+  box-sizing: border-box;
+  border: 0.3em solid rgba(255,255,255,0.5);
+  background-clip: padding-box;
+}
+nav a:nth-child(1) {
+    background-color: limegreen;
+}
+nav a:nth-child(2) {
+    background-color: lightsteelblue;
+}
+nav a:nth-child(3) {
+    background-color: skyblue;
+}
+nav a:nth-child(4) {
+    background-color: lightblue;
+}
+nav a:nth-child(5) {
+    background-color: lavender;
+}
+    </style>
 </head>
 <body>
+    <nav>
+        <a href="https://www.tutorialrepublic.com/html-reference/html5-tags.php">html5 tags</a>
+        <a href="https://cn.bing.com/images/search?view=detailV2&ccid=b5TYB5uz&id=730E30BDC1EA34AA88A6AF8C902CB8DE05E99643&thid=OIP.b5TYB5uzrEW6X6PGxoKW2gHaHt&mediaurl=http%3a%2f%2fgmod.org%2fmediawiki%2fimages%2fe%2fec%2fFigure3.png&exph=759&expw=729&q=colors+list&simid=608009033338782163&selectedIndex=11&ajaxhist=0">colors list</a>
+    </nav>
     <ul>
         <li>2背景与边框
             <ul>
                 <li><a href="2背景与边框/1半透明边框.html">2.1半透明边框</a></li>
                 <li><a href="2背景与边框/2多重边框.html">2.2多重边框.html</a></li>
+                <li><a href="2背景与边框/3灵活的背景定位.html">2.3灵活的背景定位.html</a></li>
             </ul>
         </li>
     </ul>

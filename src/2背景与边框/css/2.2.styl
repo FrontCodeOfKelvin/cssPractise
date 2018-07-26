@@ -5,8 +5,20 @@ body
     main
         display: flex
         label
+            height 12rem
+            padding 1em
             &.box-shadow
                 background: yellowgreen;
                 box-shadow: 0 0 0 10px #655,
                             0 0 0 15px deeppink,
                             0 2px 5px 15px rgba(0,0,0,.6);
+            &.box-shadow-inset
+                background: yellowgreen;
+                box-shadow: 0 0 0 10px firebrick inset,
+                            0 0 0 15px deeppink inset,
+                            0 2px 5px 15px rgba(0,0,0,.6) inset;
+            &.box-shadow-outline
+                background: #655; 
+                color: hotpink;
+                outline: 2px dashed #fff;
+                outline-offset: -.4em;
