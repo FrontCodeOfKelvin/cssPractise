@@ -1,10 +1,7 @@
-semi-transparent-border()
-    box-sizing:border-box;
-    border: arguments solid hsla(0, 0%, 100%, .5);
-    background-clip: padding-box;
+@import '0common/stylus'
 
 body
-    background: url('../images/stone-art.jpg') no-repeat;
+    background: url('stone-art.jpg') no-repeat;
     background-size: cover;
     margin: 0;
 
@@ -12,7 +9,7 @@ body
         z-index: 1;
         text-align: center;
         font-size: 2em;
-        background: gold;
+        background: $test;
         margin: 0 3em;
         margin-top: .15em;
         semi-transparent-border(.3em)
@@ -40,12 +37,5 @@ body
         width: 60%;
         height: 60%;
         semi-transparent-border(5em)
-        .mixin
-            color mediumseagreen
-            background #655
-            padding 2em
-            width 30em
-            outline: .2em dashed #fff
-            outline-offset: -1.2em
-            margin-left: 2em
-            border-radius: 1em
+        .stitch-box
+            stitch-box()
