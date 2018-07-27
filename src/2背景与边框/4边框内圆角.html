@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4边框内圆角</title>
+    <link rel="stylesheet" href="css/2.4.css">
+</head>
+<body>
+    <header>4边框内圆角</header>
+    <nav>
+        <a href="http://play.csssecrets.io/inner-rounding" target="_blank">inner-rounding</a>
+        <a href="http://w3.org/TR/css-backgrounds" class="rule" target="_blank">css背景与边框</a>
+        <a href="http://w3.org/TR/css3-ui" class="rule" target="_blank">css基本UI特性</a>
+    </nav>
+    <topics>
+        <topic>
+            内侧有圆角,边框或描边保持直角。一个元素实现
+        </topic>
+    </topics>
+    <main>
+        <box>
+            <pre>
+border-radius: 1.3em
+box-shadow 0 0 0 1em #655
+            </pre>
+        </box>
+        <box>
+            <pre>
+border-radius: .8em
+box-shadow 0 0 0 1em tan
+outline: 1em solid tan;
+            </pre>
+        </box>
+        
+        <box>
+        </box>
+    </main>
+    <aside>
+        <mark>
+            <pre>
+为了让这个效果得以达成，
+扩张半径(box-shadow)需要比描边(outline)的宽度值小，
+但它同时又要比(√2-1)r大
+            </pre>    
+        </mark>
+    </aside>
+</body>
+</html>
