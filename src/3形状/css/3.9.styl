@@ -1,0 +1,21 @@
+@import '0common/stylus'
+
+body
+    css-img9()
+    main
+        box
+            width: 20em;
+            div
+                background: #fff;
+            &:nth-child(1)
+                div
+                    border-radius: 50%;
+            &:nth-child(2)
+                div
+                    border-radius: 50% / 100% 100% 0 0;
+            &:nth-child(3)
+                div
+                    border-radius: 100% 0 0 100% / 50%;
+            &:nth-child(4)
+                div
+                    border-radius: 100% 0 0 0;

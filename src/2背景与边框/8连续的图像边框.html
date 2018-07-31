@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8连续的图像边框</title>
+    <link rel="stylesheet" href="css/2.8.css">
+</head>
+<body>
+    <header>8连续的图像边框</header>
+    <nav>
+        <a href="http://play.csssecrets.io/continuous-image-borders" target="_blank">continuous-image-borders</a>
+        <a href="http://play.csssecrets.io/vintage-envelope" target="_blank">vintage-envelope</a>
+        <a href="http://play.csssecrets.io/marching-ants" target="_blank">marching-ants</a>
+        <a href="http://www.css88.com/book/css/values/image/linear-gradient().htm" class="other" target="_blank">linear-gradient</a>
+    </nav>
+    <topics>
+        <topic>
+            图案或图片应用为边框， 而不是背景
+        </topic>
+    </topics>
+    <main>
+        <box>
+            <div>
+                <pre>
+padding: 1em;
+border: 1em solid transparent;
+background: linear-gradient(white, white),
+    url(stone-art.jpg);
+background-size: cover;
+background-clip: padding-box, border-box;
+background-origin: border-box;                    
+                </pre>
+            </div>
+        </box>
+        <box>
+            <div>
+                <pre>
+padding: 1em;
+border: 1em solid transparent;
+background: linear-gradient(white, white) 
+    padding-box,
+    repeating-linear-gradient(-45deg,
+    red 0, red 12.5%,
+    transparent 0, transparent 25%,
+    #58a 0, #58a 37.5%,
+    transparent 0, transparent 50%) 0 / 5em 5em;
+                </pre>                
+            </div>
+        </box>
+        <box>
+            <div>
+                <pre>
+@keyframes ants { to { background-position: 100% } }
+padding: 1em;
+border: 1px solid transparent;
+background:
+    linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(-45deg,
+    black 0, black 25%, white 0, white 50%
+    ) 0 / .6em .6em;
+animation: ants 12s linear infinite;                    
+                </pre>
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+            </div>
+        </box>
+    </main>
+    <aside>
+        <mark>
+            <pre>
+只能在多重背景的最底层设置背景色， 因此需要用一道从
+白色过渡到白色的 CSS 渐变来模拟出纯白实色背景的效果
+            </pre>
+        </mark>
+    </aside>
+</body>
+</html>

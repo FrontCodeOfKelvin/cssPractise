@@ -27,11 +27,96 @@
         <topic>棋盘</topic>
     </topics>
     <main>
-        
+        <box>
+            <div>
+                background: white<br/>
+                background-image: <br/>
+                    linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 0),<br/>
+                    linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);<br/>
+                background-size: 30px 30px; <br/>
+            </div>
+        </box>
+        <box>
+            <div>
+                background: #58a;<br/>
+                background-image:<br/>
+                    linear-gradient(white 1px, transparent 0),<br/>
+                    linear-gradient(90deg, white 1px, transparent 0);<br/>
+                background-size: 30px 30px;<br/>
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+                    @mixin polka($size, $dot, $base, $accent) {<br/>
+                        background: $base;<br/>
+                        background-image:<br/>
+                        radial-gradient($accent $dot, transparent 0),<br/>
+                        radial-gradient($accent $dot, transparent 0);<br/>
+                        background-size: $size $size;<br/>
+                        background-position: 0 0, $size/2 $size/2;<br/>
+                    }<br/>
+                    调用：<br/>
+                    @include polka(30px, 30%, #655, tan);<br/>
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+               
+            </div>
+        </box>
+        <box>
+            <div>
+            </div>
+        </box>
     </main>
     <aside>
         <mark>
             <pre>
+background-position: 0 0, 15px 15px;
+---
+@mixin polka($size, $dot, $base, $accent) {
+    background: $base;
+    background-image:
+    radial-gradient($accent $dot, transparent 0),
+    radial-gradient($accent $dot, transparent 0);
+    background-size: $size $size;
+    background-position: 0 0, $size/2 $size/2;
+}
+@include polka(30px, 30%, #655, tan);
+---
+@mixin checkerboard($size, $base, 
+        $accent: rgba(0,0,0,.25)) {
+    background: $base;
+    background-image:
+    linear-gradient(45deg, $accent 25%, transparent 0,
+        transparent 75%, $accent 0),
+    linear-gradient(45deg,
+        $accent 25%, transparent 0,
+    transparent 75%, $accent 0);
+        background-position: 0 0, $size $size,
+        background-size: 2*$size 2*$size;
+    }
+@include checkerboard(15px, #58a, tan);
             </pre>
         </mark>
     </aside>
