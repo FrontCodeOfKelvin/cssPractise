@@ -1,0 +1,22 @@
+@import '0common/stylus'
+
+body
+    css-img8()
+    main
+        box
+            width: 20em;
+            div
+                background: #fff;
+            &:nth-child(1)
+                ball
+                    animation: am1 2s cubic-bezier(.1,.25,1,.25) infinite
+                    @keyframes am1 {
+                        60%, 80%, to {
+                            transform: translateY(400px) scale3d(3,3,5)
+                            animation-timing-function: ease
+                        }
+                        70% {transform: translateY(300px) scale3d(1,1,2)}
+                        90% {transform: translateY(360px)}
+                    }
+                    
+
