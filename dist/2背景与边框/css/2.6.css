@@ -287,6 +287,13 @@ aside mark {
   font-size: 1.2em;
   line-height: 1.1em;
 }
+ball {
+  display: block;
+  background: #f00;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
 background-size:13em 13em,
 11em 11em,
 5em 5em,
