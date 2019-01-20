@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.2 多重边框</title>
+    <link rel="stylesheet" href="css/2.2.css">
+</head>
+<body>
+    <header>2.2 多重边框</header>
+    <nav>
+        <a href="http://play.csssecrets.io/multiple-borders" target="_blank">试一试</a> 
+        <a href="http://w3.org/TR/css-backgrounds" class="rule" target="_blank">css背景与边框</a> 
+        <a href="http://w3.org/TR/css3-ui" class="rule" target="_blank">css基本UI特性</a> 
+        <a href="https://blog.csdn.net/MOONCOM/article/details/76209179" class="other" target="_blank">flex布局</a>
+        <a href="http://www.css88.com/book/css/properties/border/box-shadow.htm" class="other" target="_blank">box-shadow</a>
+    </nav>
+
+    <main>
+        <label class="box-shadow">
+            使用box-shadow来模拟双层外框<br/>
+            (默认外扩)
+
+            <pre>
+background: yellowgreen;
+box-shadow: 0 0 0 10px #655,
+            0 0 0 15px deeppink,
+            0 2px 5px 15px rgba(0,0,0,.6);
+            </pre>     
+        </label>
+
+        <label class="box-shadow-inset">
+            内嵌<br/>
+            你可以给 box-shadow属性加上inset关键字，<br/>
+            来使投影绘制在元素的内圈
+            <pre>
+background: yellowgreen;
+box-shadow: 0 0 0 10px firebrick inset,
+            0 0 0 15px deeppink inset,
+            0 2px 5px 15px rgba(0,0,0,.6) inset;
+            </pre>
+        </label>
+
+        <label class="box-shadow-outline">
+            outline<br/>
+            <pre>
+background: #655; 
+color: hotpink;
+outline: 2px dashed #fff;
+outline-offset: -.4em;
+            </pre>
+        </label>
+    </main>
+    <aside>
+        <mark>
+            <pre>
+缝线盒
+stitch-box(width_)
+    width: width_
+    color seagreen
+    background #655
+    padding 1.5em
+    outline: .2em dashed #fff
+    outline-offset: -1.2em
+    border-radius: .5em
+    font-size 1.2em
+    line-height: 1.1em
+            </pre>
+        </mark>
+    </aside>
+</body>
+</html>

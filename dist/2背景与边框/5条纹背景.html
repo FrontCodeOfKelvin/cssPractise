@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5条纹背景</title>
+    <link rel="stylesheet" href="css/2.5.css">
+</head>
+<body>
+    <header>5条纹背景</header>
+    <nav>
+        <a href="http://play.csssecrets.io/horizontal-stripes" target="_blank">horizontal-stripes</a>
+        <a href="http://play.csssecrets.io/vertical-stripes" target="_blank">vertical-stripes</a>
+        <a href="http://play.csssecrets.io/diagonal-stripes" target="_blank">diagonal-stripes</a>
+        <a href="http://play.csssecrets.io/diagonal-stripes-60deg" target="_blank">diagonal-stripes-60deg</a>
+        <a href="http://play.csssecrets.io/subtle-stripes" target="_blank">subtle-stripes</a>
+        <a href="http://w3.org/TR/css-images" class="rule" target="_blank">css图像</a>
+        <a href="http://w3.org/TR/css-backgrounds" class="rule" target="_blank">css背景与边框</a>
+        <a href="http://w3.org/TR/css4-images" class="rule" target="_blank">CSS图像（第四版）</a>
+        <a href="http://www.css88.com/book/css/values/image/linear-gradient().htm" class="other" target="_blank">linear-gradient</a>
+    </nav>
+    <topics>
+        <topic>直接在CSS中创建条纹图案</topic>
+        <topic>垂直条纹</topic>
+        <topic>斜向条纹</topic>
+        <topic>更好的斜向条纹</topic>
+        <topic>灵活的同色系条纹</topic>
+    </topics>
+    <main>
+        <box>
+            <div>
+                background: linear-gradient(#fb3,#58a)
+            </div>
+        </box>
+        <box>
+            <div>
+                background: linear-gradient(#fb3 20%,#58a 80%)
+            </div>
+        </box>
+        <box>
+            <div>
+                background: linear-gradient(#fb3 50%,#58a 50%)
+            </div>
+        </box>
+        <box>
+            <div>
+                background: linear-gradient(#fb3 50%,#58a 50%)
+                background-size: 100% 30px
+            </div>
+        </box>
+        <box>
+            <div>
+                background: linear-gradient(#fb3 30%,#58a 0)
+                background-size: 100% 30px
+            </div>
+        </box>
+        <box>
+            <div>
+                    background: linear-gradient(#fb3 30%,
+                                #58a 0, #58a 66.6%, yellowgreen 0)<br/>
+                    background-size: 100% 45px
+            </div>
+        </box>
+        <box>
+            <div>
+                    background: linear-gradient(to right,/* 或 90deg */<br/>
+                    #fb3 50%,#58a 50%)<br/>
+                    background-size: 30px 100%
+            </div>
+        </box>
+        <box>
+            <div>
+                    background: linear-gradient(45deg, #fb3 50%,#58a 50%)<br/>
+                    background-size: 30px 30px
+            </div>
+        </box>
+        <box>
+            <div>
+                background: linear-gradient(45deg, #fb3 25%,#58a 0,#58a 50%, #fb3 0, #fb3 75%, #58a 0)<br/>
+                background-size: 30px 30px
+            </div>
+        </box>
+        <box>
+            <div>
+                background: linear-gradient(45deg, #fb3 25%,#58a 0,#58a 50%, #fb3 0, #fb3 75%, #58a 0)<br/>
+                background-size: 42.426406871px 42.426406871px
+            </div>
+        </box>
+        <box>
+            <div>
+                background: repeating-linear-gradient(45deg, #fb3 0, #fb3 25%, #58a 0, #58a 50%);<br/>
+                background-size: 42.426406871px 42.426406871px;
+            </div>
+        </box>
+        <box>
+            <div>
+                background: repeating-linear-gradient(30deg,#79b, #79b 15px, #58a 0, #58a 30px);
+            </div>
+        </box>
+    </main>
+    <aside>
+        <mark>
+            <pre>
+    如果某个色标的位置值比整个列表中在它之前的色标的位置值都要
+小，则该色标的位置值会被设置为它前面所有色标位置值的最大值。
+linear-gradient() radial-gradient()
+repeating-linear-gradient() repeating-radial-gradient()
+            </pre>
+        </mark>
+    </aside>
+</body>
+</html>

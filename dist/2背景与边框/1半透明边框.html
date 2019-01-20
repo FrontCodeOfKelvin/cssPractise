@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2.1半透明边框</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/2.1.css">
+</head>
+<body>
+    <header>2.1 半透明边框</header>
+    <nav>
+        <a href="http://play.csssecrets.io/translucent-borders" target="_blank">试一试</a> 
+        <a href="http://w3.org/TR/css-backgrounds" class="rule" target="_blank">css背景与边框</a> 
+    </nav>
+
+    <main>
+        我们都要一个半透明边框
+        <ul>
+            <li>box-sizing: border-box;(元素尺寸指代的盒子，默认时值：border-content)</li>
+            <li>background-clip: padding-box;(背景裁剪，默认时值：border-box)</li>
+            <li>border: 5rem solid hsla(0, 0%, 100%, .5);
+                <ul>
+                    <li><a href="http://www.css88.com/book/css/values/color/hsla.htm" target="_blank">hsla(hue, saturation, lightness, alpha)</a></li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+
+    <aside>
+        <mark>
+            <pre>
+半透明边框
+semi-transparent-border(borderWidth_)  
+    box-sizing:border-box;  
+    border: borderWidth_ solid hsla(0, 0%, 100%, .5);  
+    background-clip: padding-box; 
+            </pre>
+        </mark>
+    </aside>
+</body>
+</html>
