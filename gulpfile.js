@@ -1,9 +1,12 @@
+// import imagemin from 'gulp-imagemin'
+
 var stylus = require('gulp-stylus'),
     gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
-    imagemin = require('gulp-imagemin');
+    watch = require('gulp-watch');
 
-gulp.task('html', function () {    
+gulp.task('html', function () {
+    console.log('do html')
     return gulp.src(['src/**/*.html','*.html'])
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({
@@ -35,15 +38,29 @@ gulp.task('browserSync', function() {
     browserSync.init({
        server: {
           baseDir: 'dist'
-       }
+       },
+       files:['**']
     })
  })
 
- gulp.task('default', ['html', 'stylus', 'browserSync'], function (){
-    gulp.watch(['src/**/*.html','*.html'], function(){
-        gulp.run('html');
-    });
-    gulp.watch(['src/**/css/*.styl','src/0common/**/*'], function() {
-        gulp.run('stylus');
-    });
- });
+
+//  gulp.task('watch', function () {
+//   watch('./src/**/*.html', function () {
+//     gulp.start('html');	//执行html任务
+//       // browserSync.reload(); //刷新浏览器
+//   });
+//   watch(['src/**/css/*.styl','src/0common/**/*'], function () {
+//     gulp.start('stylus');	//执行html任务
+//       // browserSync.reload(); //刷新浏览器
+//   });
+// });
+gulp.task('watch', function () {
+  console.log('do watch')
+  return watch('./src/**/*.html', function () {
+    console.log('do watch html')
+      gulp.series('html')()
+      // browserSync.reload(); //刷新浏览器
+  });
+});
+
+ gulp.task('default', gulp.parallel('html', 'stylus', 'browserSync', 'watch'));
